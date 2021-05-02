@@ -75,6 +75,9 @@ extension CharacterListViewController {
 }
 
 class CharacterListCollectionView: UICollectionView {
+    
+
+    
     enum Section {
         case main
     }
@@ -139,6 +142,7 @@ class CharacterListCollectionView: UICollectionView {
         let snapshot = createSnapshot(state: state)
         diffableDataSource.apply(snapshot)
     }
+    
 }
 
 class CharacterCell: UICollectionViewCell {
@@ -152,7 +156,15 @@ class CharacterCell: UICollectionViewCell {
         lblTitle.text = character.name
         imgThumb.downloaded(from: character.image)
     }
+    
+    @IBAction func didTapButton() {
+        let storyboard = UIStoryboard(name: "CharacterList", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CharacterDetailViewController")
+        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+    }
+    
 }
+
 
 extension UIImageView {
     func dowloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {

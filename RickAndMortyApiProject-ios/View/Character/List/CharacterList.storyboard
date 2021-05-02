@@ -28,17 +28,23 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCell" id="SbM-rB-tSf" customClass="CharacterCell" customModule="RickAndMortyApiProject_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4nm-W8-g2f">
-                                            <rect key="frame" x="0.0" y="0.0" width="42" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-tP-y43">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="107"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="9"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p06-34-yr7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="30"/>
+                                                    <connections>
+                                                        <action selector="didTapButton" destination="SbM-rB-tSf" eventType="touchUpInside" id="jOv-2s-RXo"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-yq-Eqt">
-                                                    <rect key="frame" x="0.0" y="107" width="42" height="21"/>
+                                                    <rect key="frame" x="0.0" y="9" width="41.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -48,7 +54,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="0oe-tP-y43" secondAttribute="trailing" id="6Q7-11-QhW"/>
                                                 <constraint firstAttribute="bottom" secondItem="2Uo-yq-Eqt" secondAttribute="bottom" id="DCx-U6-VIp"/>
                                                 <constraint firstItem="0oe-tP-y43" firstAttribute="leading" secondItem="4nm-W8-g2f" secondAttribute="leading" id="G22-sm-TzK"/>
+                                                <constraint firstAttribute="trailing" secondItem="p06-34-yr7" secondAttribute="trailing" id="XG6-lm-Sx9"/>
+                                                <constraint firstItem="p06-34-yr7" firstAttribute="top" secondItem="4nm-W8-g2f" secondAttribute="top" id="Yco-Lo-MiN"/>
                                                 <constraint firstAttribute="trailing" secondItem="2Uo-yq-Eqt" secondAttribute="trailing" id="dli-wN-paG"/>
+                                                <constraint firstItem="p06-34-yr7" firstAttribute="leading" secondItem="4nm-W8-g2f" secondAttribute="leading" id="i1P-Vw-BbP"/>
+                                                <constraint firstAttribute="bottom" secondItem="p06-34-yr7" secondAttribute="bottom" id="qRy-b1-PlQ"/>
                                                 <constraint firstItem="2Uo-yq-Eqt" firstAttribute="top" secondItem="0oe-tP-y43" secondAttribute="bottom" id="shf-q6-BTS"/>
                                                 <constraint firstItem="2Uo-yq-Eqt" firstAttribute="leading" secondItem="4nm-W8-g2f" secondAttribute="leading" id="tny-gD-iMK"/>
                                                 <constraint firstItem="0oe-tP-y43" firstAttribute="top" secondItem="4nm-W8-g2f" secondAttribute="top" id="uZ0-Dl-1dw"/>
@@ -78,6 +88,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVg-ii-mIO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="89.855072463768124" y="99.776785714285708"/>
+        </scene>
+        <!--Character Detail View Controller-->
+        <scene sceneID="DZY-P3-Ryj">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="zmo-dH-dtm" customClass="CharacterDetailViewController" customModule="RickAndMortyApiProject_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l6n-I2-B6J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Z7F-tY-n3Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebR-Hf-dAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="811" y="86"/>
         </scene>
     </scenes>
     <resources>

@@ -23,6 +23,7 @@
 		E9801D16263C5A8A00C626E2 /* RickAndMortyBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D15263C5A8A00C626E2 /* RickAndMortyBaseApi.swift */; };
 		E9801D24263C6ABB00C626E2 /* CodableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D23263C6ABB00C626E2 /* CodableResponse.swift */; };
 		E9801D29263CB5AC00C626E2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D28263CB5AC00C626E2 /* Color.swift */; };
+		E9B0AB44263F264F005BC9B0 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0AB43263F264F005BC9B0 /* CharacterDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E9801D15263C5A8A00C626E2 /* RickAndMortyBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyBaseApi.swift; sourceTree = "<group>"; };
 		E9801D23263C6ABB00C626E2 /* CodableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponse.swift; sourceTree = "<group>"; };
 		E9801D28263CB5AC00C626E2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E9B0AB43263F264F005BC9B0 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		E9801CEC263C520100C626E2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E9B0AB43263F264F005BC9B0 /* CharacterDetailViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9801D16263C5A8A00C626E2 /* RickAndMortyBaseApi.swift in Sources */,
+				E9B0AB44263F264F005BC9B0 /* CharacterDetailViewController.swift in Sources */,
 				E9801D04263C551200C626E2 /* OriginRemote.swift in Sources */,
 				E9801D29263CB5AC00C626E2 /* Color.swift in Sources */,
 				E9801CCE263C50B000C626E2 /* ViewController.swift in Sources */,
