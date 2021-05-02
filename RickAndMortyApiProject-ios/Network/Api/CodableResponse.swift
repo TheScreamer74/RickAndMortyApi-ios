@@ -10,3 +10,4 @@ import Foundation
 struct RickAndMortyResponse<T: Decodable>: Decodable {
     let results: [T]
 }
+

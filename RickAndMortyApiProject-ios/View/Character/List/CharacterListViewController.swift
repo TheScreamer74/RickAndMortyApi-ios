@@ -25,10 +25,27 @@ class CharacterListViewController: UIViewController {
         }
       }
     }
+    
+    @objc func didTap(_ sender: UITapGestureRecognizer) {
+        guard let indexPath = self.characterList.indexPathForItem(at: sender.location(in: self.characterList)) else {
+            return
+        }
+        
+        guard case .ready(let items) = state else { return }
+        
+        let storyboard = UIStoryboard(name: "CharacterList", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "CharacterDetailViewController") as! CharacterDetailViewController
+        vc.characterId = items[indexPath.row].id
+        self.present(vc, animated: true, completion: nil)
+
+        print(items[indexPath.row].id)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.didTap(_:)))
+        self.characterList.addGestureRecognizer(tap)
         state = .loading
         
         provider.request(.characters) { [weak self] result in
@@ -47,6 +64,8 @@ class CharacterListViewController: UIViewController {
             self.state = .error
           }
         }
+        
+
         
         
         
@@ -90,7 +109,6 @@ class CharacterListCollectionView: UICollectionView {
 
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { (section, environment) -> NSCollectionLayoutSection? in
-            let snapshot = self.diffableDataSource.snapshot()
             
 
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -155,12 +173,6 @@ class CharacterCell: UICollectionViewCell {
         
         lblTitle.text = character.name
         imgThumb.downloaded(from: character.image)
-    }
-    
-    @IBAction func didTapButton() {
-        let storyboard = UIStoryboard(name: "CharacterList", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CharacterDetailViewController")
-        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
     }
     
 }
