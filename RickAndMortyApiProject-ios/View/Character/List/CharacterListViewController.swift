@@ -18,7 +18,6 @@ class CharacterListViewController: UIViewController {
         switch state {
         case .ready:
             print("ready")
-            characterList.reloadData()
         case .loading:
             print("loading")
         case .error:
@@ -39,6 +38,7 @@ class CharacterListViewController: UIViewController {
           case .success(let response):
             do {
               self.state = .ready(try response.map(RickAndMortyResponse<CharacterRemote>.self).results)
+                self.characterList.setUpCollectionView(state: self.state)
             } catch {
                 print(error)
               self.state = .error
@@ -48,7 +48,7 @@ class CharacterListViewController: UIViewController {
           }
         }
         
-        characterList.setUpCollectionView(state: state)
+        
         
         // Do any additional setup after loading the view.
     }
@@ -111,11 +111,14 @@ class CharacterListCollectionView: UICollectionView {
         return layout
     }
 
-    func createSnapshot() -> NSDiffableDataSourceSnapshot<Section, Item> {
+    func createSnapshot(state: CharacterListViewController.State) -> NSDiffableDataSourceSnapshot<Section, Item> {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
         snapshot.appendSections([.main])
         
-        //snapshot.appendItems(snapshotImage, toSection: .main)
+        guard case .ready(let items) = state else { return snapshot}
+        
+        
+        snapshot.appendItems(items.map(Item.character), toSection: .main)
 
         return snapshot
     }
@@ -133,13 +136,13 @@ class CharacterListCollectionView: UICollectionView {
             return cell
         })
 
-        let snapshot = createSnapshot()
+        let snapshot = createSnapshot(state: state)
         diffableDataSource.apply(snapshot)
     }
 }
 
 class CharacterCell: UICollectionViewCell {
-    public static let reuseIdentifier = "ComicCell"
+    public static let reuseIdentifier = "CharacterCell"
 
     @IBOutlet private weak var imgThumb: UIImageView!
     @IBOutlet private weak var lblTitle: UILabel!
