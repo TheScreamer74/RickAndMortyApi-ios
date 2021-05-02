@@ -27,17 +27,17 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCell" id="SbM-rB-tSf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CharacterCell" id="SbM-rB-tSf" customClass="CharacterCell" customModule="RickAndMortyApiProject_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4nm-W8-g2f" customClass="CharacterCell" customModule="RickAndMortyApiProject_ios" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4nm-W8-g2f">
                                             <rect key="frame" x="0.0" y="0.0" width="42" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0oe-tP-y43">
                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="107"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-yq-Eqt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uo-yq-Eqt">
                                                     <rect key="frame" x="0.0" y="107" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -53,11 +53,11 @@
                                                 <constraint firstItem="2Uo-yq-Eqt" firstAttribute="leading" secondItem="4nm-W8-g2f" secondAttribute="leading" id="tny-gD-iMK"/>
                                                 <constraint firstItem="0oe-tP-y43" firstAttribute="top" secondItem="4nm-W8-g2f" secondAttribute="top" id="uZ0-Dl-1dw"/>
                                             </constraints>
-                                            <connections>
-                                                <outlet property="imgThumb" destination="0oe-tP-y43" id="KzG-2C-Yxi"/>
-                                                <outlet property="lblTitle" destination="2Uo-yq-Eqt" id="Blu-sg-bJR"/>
-                                            </connections>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgThumb" destination="0oe-tP-y43" id="taO-II-hze"/>
+                                            <outlet property="lblTitle" destination="2Uo-yq-Eqt" id="JFO-XX-zlP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
