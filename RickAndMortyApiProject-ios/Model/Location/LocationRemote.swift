@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct LocationRemote: Decodable {
+struct LocationRemote: Decodable, Hashable, Equatable {
     let name: String
     let url: String //url
     

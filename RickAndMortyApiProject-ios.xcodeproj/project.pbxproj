@@ -22,6 +22,7 @@
 		E9801D13263C58E900C626E2 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D12263C58E900C626E2 /* CharacterListViewController.swift */; };
 		E9801D16263C5A8A00C626E2 /* RickAndMortyBaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D15263C5A8A00C626E2 /* RickAndMortyBaseApi.swift */; };
 		E9801D24263C6ABB00C626E2 /* CodableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D23263C6ABB00C626E2 /* CodableResponse.swift */; };
+		E9801D29263CB5AC00C626E2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9801D28263CB5AC00C626E2 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E9801D12263C58E900C626E2 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
 		E9801D15263C5A8A00C626E2 /* RickAndMortyBaseApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyBaseApi.swift; sourceTree = "<group>"; };
 		E9801D23263C6ABB00C626E2 /* CodableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponse.swift; sourceTree = "<group>"; };
+		E9801D28263CB5AC00C626E2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		E9801CC8263C50B000C626E2 /* RickAndMortyApiProject-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E9801D27263CB59500C626E2 /* Utils */,
 				E9801CE3263C511000C626E2 /* Network */,
 				E9801CE1263C510300C626E2 /* View */,
 				E9801CE0263C50FE00C626E2 /* Model */,
@@ -201,6 +204,14 @@
 				E9801D03263C551200C626E2 /* OriginRemote.swift */,
 			);
 			path = Origin;
+			sourceTree = "<group>";
+		};
+		E9801D27263CB59500C626E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E9801D28263CB5AC00C626E2 /* Color.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +331,7 @@
 			files = (
 				E9801D16263C5A8A00C626E2 /* RickAndMortyBaseApi.swift in Sources */,
 				E9801D04263C551200C626E2 /* OriginRemote.swift in Sources */,
+				E9801D29263CB5AC00C626E2 /* Color.swift in Sources */,
 				E9801CCE263C50B000C626E2 /* ViewController.swift in Sources */,
 				E9801D24263C6ABB00C626E2 /* CodableResponse.swift in Sources */,
 				E9801CFF263C53B900C626E2 /* CharacterRemote.swift in Sources */,

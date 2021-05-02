@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Character {
+struct Character: Hashable, Equatable {
     let name: String
     let thumbnail: String
     let id: Int

@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct CharacterRemote: Decodable {
+struct CharacterRemote: Decodable, Hashable, Equatable {
+    static func == (lhs: CharacterRemote, rhs: CharacterRemote) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     let id: Int
     let name: String
     let status: String

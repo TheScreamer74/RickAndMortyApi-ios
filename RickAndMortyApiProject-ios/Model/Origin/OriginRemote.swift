@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OriginRemote: Decodable {
+struct OriginRemote: Decodable, Hashable, Equatable {
     let name: String
     let url: String //url
     
